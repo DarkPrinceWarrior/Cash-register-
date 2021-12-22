@@ -4,21 +4,29 @@
 <h1>{% block title %} Welcome to FlaskBlog {% endblock %}</h1>
 
 {% block content %}
-
+<h1>
+   Оплата
+</h1>
 
   <form method="post">
     <div class="form-group">
-        <label for="title">Сумма</label>
-        <input type="text" name="title"
-               placeholder="Введите сумму" class="form-control"
-               value="{{ request.form['title'] }}"/>
+        <label for="sum">Сумма</label>
+        <label>
+            <input type="text" name="sum"
+                   placeholder="Введите сумму" class="form-control"
+                   value="{{ request.form['sum'] }}"/>
+        </label>
     </div>
 
-    <div class="form-group">
-        <label for="content">Предмет оплаты</label>
-        <textarea name="content" placeholder="Введите название товара"
-                  class="form-control">{{ request.form['content'] }}</textarea>
+      <div class="form-group">
+        <label for="item">Предмет оплаты</label>
+        <label>
+            <input type="text" name="item"
+                   placeholder="Введите название товара" class="form-control"
+                   value="{{ request.form['item'] }}"/>
+        </label>
     </div>
+
     <div class="form-group">
         <button type="submit" class="btn btn-primary">Зарегистрировать платеж</button>
     </div>
