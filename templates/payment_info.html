@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+<h1>{% block title %} Payment details {% endblock %}</h1>
+
+
+{% block content %}
+<h1>
+   Детали платежа
+</h1>
+
+
+
+ <div class="form-group">
+        <label for="sum">Название товара</label>
+        <label>
+         {{ name }}
+        </label>
+    </div>
+
+     <div class="form-group">
+        <label for="sum">Цена товара</label>
+        <label>
+          {{ sum }}
+        </label>
+    </div>
+
+     <div class="form-group">
+        <label for="sum">Время покупки товара</label>
+        <label>
+           {{ date }}
+        </label>
+
+    </div>
+
+
+{% endblock %}

@@ -9,14 +9,21 @@
 </h1>
 
   <form method="post">
-    <div class="form-group">
-        <label for="sum">ID платежа</label>
-        <label>
-            <input type="text" name="id"
-                   placeholder="Введите идентификатор" class="form-control"
-                   value="{{ request.form['id']}}"/>
-        </label>
-    </div>
+
+
+    <label>Список платежей </label>
+      <label>
+          <select name="payment_id">
+         <option value="" disabled="disabled" selected="selected">Выберите платеж</option>
+
+              {% for payment in payments %}
+            <option>{{payment.payment_id  }}</option>
+              {% endfor %}
+
+         </select>
+      </label>
+
+
 
     <div class="form-group">
         <button type="submit" class="btn btn-primary">Получить данные платежа</button>

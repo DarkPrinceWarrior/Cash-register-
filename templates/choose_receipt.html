@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+
+<h1>{% block title %} Welcome to FlaskBlog {% endblock %}</h1>
+
+{% block content %}
+    <h1>
+   Выбор чека
+</h1>
+
+  <form method="post">
+
+
+    <label>Список чеков</label>
+      <label>
+          <select name="payment_id">
+         <option value="" disabled="disabled" selected="selected">Выберите ID чека </option>
+
+              {% for receipt in receipts %}
+            <option>{{receipt.payment_id  }}</option>
+              {% endfor %}
+
+         </select>
+      </label>
+
+
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Получить данные чека</button>
+    </div>
+</form>
+
+{% endblock %}

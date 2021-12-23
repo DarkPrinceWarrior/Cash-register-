@@ -15,17 +15,20 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <a class="navbar-brand" href="{{ url_for('payment_register')}}">Оплата</a>
+        <a class="navbar-brand" href="{{ url_for('payment_register')}}">Оплата товара</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
             <li class="nav-item active">
-               <a class="navbar-brand" href="{{ url_for('receipt_action')}}">Чек</a>
+               <a class="navbar-brand" href="{{ url_for('receipt_action')}}">Регистрация чека</a>
             </li>
                  <li class="nav-item active">
-               <a class="navbar-brand" href="{{ url_for('payment_information')}}">Платеж</a>
+               <a class="navbar-brand" href="{{ url_for('payment_information')}}">Детали платежа</a>
+            </li>
+                <li class="nav-item active">
+               <a class="navbar-brand" href="{{ url_for('receipt_details')}}">Детали чека</a>
             </li>
             </ul>
         </div>
